@@ -16,12 +16,9 @@ require('CInject/CInject.php');
  */
 
 CInject::container()->add_search_path('models');
-CInject::container()->add_search_path('models/logic');
-CInject::container()->add_search_path('models/repositories');
 
 /*
  * Register your dependencies.
  */
  
-CInject::container()->bind('IHomeLogic')->to('HomeLogic')->as_singleton();
-CInject::container()->bind('IUserRepository')->to('UserRepository')->as_singleton();
+// Example: CInject::container()->bind('IUserRepository')->to('UserRepository');
