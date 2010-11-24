@@ -84,9 +84,9 @@ class CInject_container {
      * @param mixed $concrete the name of the concrete class (e.g. Foo), or the instance of the concrete type
      * @return object the container instance
      */	
-	public function to($concrete)
+	public function to(&$concrete)
 	{
-		$this->registry[$this->last_bound_class]->concrete = $concrete;
+		$this->registry[$this->last_bound_class]->concrete =& $concrete;
 		return $this;
 	}
 
